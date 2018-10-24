@@ -25,7 +25,7 @@ class ZiRoomCmd extends Command
      */
     protected $description = 'ZiRoom';
 
-    protected $recvMail = '809721719@qq.com';
+    protected $recvMail = '';
 
     protected $uri = [];
 
@@ -43,9 +43,10 @@ class ZiRoomCmd extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->uri = env('ZIROOM_URI');
+        $this->uri = env('ZIROOM_URI', '');
         $this->redisSecond = env('ZIROOM_MAIL_SECOND', 3600);
         $this->sendSecond = env('ZIROOM_CHECK_SECOND', 10);
+        $this->recvMail = env('MAIL_FROM_ADDRESS', '');
         $this->codes = explode(',', env('ZIROOM_CODE'));
     }
 
