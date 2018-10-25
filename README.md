@@ -33,4 +33,7 @@
 
 - 运行
     *在根目录输入*
-    - php artisan ziroom
+    - 在当前窗口运行
+      - php artisan ziroom
+    - 在后台运行
+      - nohup php artisan ziroom &（nohup 命令会在目录下生成一个输出文件，占地方删掉即可）
