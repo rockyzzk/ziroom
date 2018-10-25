@@ -6,6 +6,7 @@
 ### 环境需要
 * PHP
 * Redis
+* Composer
 
 ### 部署
 - laravel 环境搭建
